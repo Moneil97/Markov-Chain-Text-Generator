@@ -1,10 +1,7 @@
-import java.util.HashMap;
-
 public class Word {
 
 	String word;
 	
-	//HashMap<Word, Integer> next = new HashMap<Word, Integer>();
 	WordMap next = new WordMap();
 	
 	public Word(String word) {
@@ -12,13 +9,7 @@ public class Word {
 	}
 	
 	public void add(Word word){
-		
 		next.add(word);
-		
-//		if (next.containsKey(word))
-//			next.replace(word, next.get(word)+1);
-//		else
-//			next.put(word, 0);
 	}
 	
 	public Word getNext(){
