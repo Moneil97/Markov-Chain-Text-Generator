@@ -20,13 +20,13 @@ public class WordMap {
 	
 	public Word getNext(){
 		
-		int rand = getIntBetween(0, 100);
-		int counter = 0;
+		float rand= (float) Math.random();
+		float counter = 0;
 		
 		for(Entry<Word, Integer> entry : map.entrySet()) {
 			
 			int value = entry.getValue();
-			float percent = value/total * 100;
+			float percent = value/total;
 			
 			if (percent + counter >= rand){
 				return entry.getKey();
@@ -49,11 +49,6 @@ public class WordMap {
 	
 	public void say(Object o) {
 		System.out.println(o);
-	}
-	
-	public static Integer getIntBetween(int lower, int upper){
-		
-		return Math.round((float)(Math.random() * (upper - lower)) + lower);
 	}
 	
 }
