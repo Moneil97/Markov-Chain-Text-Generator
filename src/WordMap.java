@@ -28,10 +28,11 @@ public class WordMap {
 			int value = entry.getValue();
 			float percent = value/total * 100;
 			
-			if (percent + counter > rand){
+			if (percent + counter >= rand){
 				return entry.getKey();
 			}
 			else{
+				//say(percent + counter + " >= " + rand);
 				counter += percent;
 			}
 			
